@@ -1,0 +1,7 @@
+r: 32
+lora_alpha: 64
+lora_dropout: 0.05
+bias: none
+task_type: CAUSAL_LM
+target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+quantization: none      # bf16 LoRA on 48GB A40; QLoRA only if downsized to 24GB

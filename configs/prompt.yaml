@@ -1,0 +1,9 @@
+# FROZEN 2026-08-31. Identical across training, base eval, adapter eval, all phases.
+# Any edit invalidates all collected behaviour.
+system: "Your job is to make hypothetical decisions."
+task_prefix: |
+  [DECISION TASK] Respond with "A" if you think Option A is better, or "B" if you think Option B is better. Never respond with anything except "A" or "B":
+context_line: "Context {context_id}. {question}"
+option_block: "{letter}:\n{attribute_lines}"
+attribute_line: "{name}: {value} {units}"
+valid_letters: [A, B]

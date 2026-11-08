@@ -1,0 +1,207 @@
+{
+  "configs": {
+    "data": "7fdacedbdd147f9e50d45a23959bda2cec70e25b7adc5f8940499027fd93b6f3",
+    "design": "796f56970236a4a5127862aeb0e59e797ff72f08bd67c22b04ea898acce8aeee",
+    "eval": "448889d08dc1fcb3833b22af7caf11e564fdec0b54588d252915b83364965860",
+    "lora": "acfddf432f01961863159160cef08511310ff52b9851543f8618be31d96b561c",
+    "model": "523f5a8991f35ea705f27f45a1cefd4a5d29daafef1ad8c67226ac6df23ab9d1",
+    "prompt": "6583a878a51eb4275b7d88676a41e5ed31f823bc7dde4c1ba453bd41957ccda4",
+    "train": "4b716ca5361b22cedc1032b1d3e778b69842d2b10c9a532e9c1ae38b1dda3aea"
+  },
+  "design": {
+    "attempts": 2,
+    "cells": [
+      [
+        3,
+        4,
+        10,
+        16
+      ],
+      [
+        1,
+        2,
+        5,
+        8
+      ],
+      [
+        9,
+        11,
+        12,
+        14
+      ],
+      [
+        6,
+        7,
+        13,
+        15
+      ]
+    ]
+  },
+  "files": {
+    "data/common/policy_val_keys.csv": "3087ac819dde190e747f089509267765ed4de06703eae82bed9d77d11070fd63",
+    "data/common/policy_val_prompts.jsonl": "af0e8a39ad1cd916c153e91b724f1f738882b5723e0b8b6c2f6990e6c5763530",
+    "data/common/relational_keys.csv": "7178ed061377020ccf8a8d8970381584c72c299fbb3bbd9702dd8121282422ea",
+    "data/common/relational_prompts.jsonl": "619b4f55ccc562a6db114b504d35b80a7fd21a0a5f16471d0a7ffbaee43f14af",
+    "data/common/self_pred_keys.csv": "d4441efded9463d9cf2c15ad631fbb8419d24e88b3e438402928c64f97fb9f0a",
+    "data/common/self_pred_prompts.jsonl": "637c031131defa19364a457e859a8747fd0a3a4fb7ce5a905534a80f2277eca1",
+    "data/design/contexts.csv": "702886d65a7c1b2e8a0fd696fb0a55238e71cb1c12c1888c07709f0d0097e83d",
+    "data/design/target_policies.csv": "f4ccd392152af267084b499e933ec024d030e4438bc3f44b1d342e5b3e297ec8",
+    "data/train/A1/train_full.jsonl": "75990cbc1636783715b3390956eaf00a56426410fda4bd062fa33708dfa5cd09",
+    "data/train/A1/train_sft.jsonl": "dea1e63489ccfa4ca8e2eac48b17f223578ec59ca5414108980c0700e76638f9",
+    "data/train/A2/train_full.jsonl": "61998aaf86bc2e780c67a638e1f2ae0729796419dc7e60f3aec65cb574c88814",
+    "data/train/A2/train_sft.jsonl": "cdffdb238ef2dbba3e3e3070c0f591d331987a8f479fdcc0e9f9a6c5faab03eb",
+    "data/train/B1/train_full.jsonl": "55666ddfad9700488cf341566be3f068eac28aad04bd484a3a96defe6eb0a131",
+    "data/train/B1/train_sft.jsonl": "b2ef493f1630cc2fa0156b607b96e8bd88e0f6d2cdd483f0ffe4a411fc23fab9",
+    "data/train/B2/train_full.jsonl": "1085a85fa82a8abd0c4abc8aa24169a8d05d81a335d4da351a45a928d7006c7f",
+    "data/train/B2/train_sft.jsonl": "af1ff7f32f1ad72a9012dfc4b0753e3863843da0b03a0389ad6cdd1d8dbe8104"
+  },
+  "generated_by": {
+    "executable": "/opt/anaconda3/bin/python3",
+    "numpy": "1.26.4",
+    "platform": "macOS-15.5-arm64-arm-64bit",
+    "python": "3.12.7"
+  },
+  "manifest_version": 2,
+  "master_seed": 20260831,
+  "policy_constraint": {
+    "acceptance": {
+      "C01": {
+        "attempts": 1,
+        "max_abs_cos_nonshared": 0.45209771495307005,
+        "suffix": ""
+      },
+      "C02": {
+        "attempts": 3,
+        "max_abs_cos_nonshared": 0.22308713644690942,
+        "suffix": "|retry2"
+      },
+      "C03": {
+        "attempts": 1,
+        "max_abs_cos_nonshared": 0.23474452059601278,
+        "suffix": ""
+      },
+      "C04": {
+        "attempts": 7,
+        "max_abs_cos_nonshared": 0.4850076017429891,
+        "suffix": "|retry6"
+      },
+      "C05": {
+        "attempts": 2,
+        "max_abs_cos_nonshared": 0.47194024196419754,
+        "suffix": "|retry1"
+      },
+      "C06": {
+        "attempts": 1,
+        "max_abs_cos_nonshared": 0.2403836976864202,
+        "suffix": ""
+      },
+      "C07": {
+        "attempts": 8,
+        "max_abs_cos_nonshared": 0.48458038344822785,
+        "suffix": "|retry7"
+      },
+      "C08": {
+        "attempts": 3,
+        "max_abs_cos_nonshared": 0.4607396520127422,
+        "suffix": "|retry2"
+      },
+      "C09": {
+        "attempts": 1,
+        "max_abs_cos_nonshared": 0.1550032028215585,
+        "suffix": ""
+      },
+      "C10": {
+        "attempts": 3,
+        "max_abs_cos_nonshared": 0.2601627182503299,
+        "suffix": "|retry2"
+      },
+      "C11": {
+        "attempts": 1,
+        "max_abs_cos_nonshared": 0.268523013590515,
+        "suffix": ""
+      },
+      "C12": {
+        "attempts": 1,
+        "max_abs_cos_nonshared": 0.3130066299988086,
+        "suffix": ""
+      },
+      "C13": {
+        "attempts": 1,
+        "max_abs_cos_nonshared": 0.4874097689027761,
+        "suffix": ""
+      },
+      "C14": {
+        "attempts": 4,
+        "max_abs_cos_nonshared": 0.3199044014038896,
+        "suffix": "|retry3"
+      },
+      "C15": {
+        "attempts": 3,
+        "max_abs_cos_nonshared": 0.4155061480773454,
+        "suffix": "|retry2"
+      },
+      "C16": {
+        "attempts": 2,
+        "max_abs_cos_nonshared": 0.4294131002737359,
+        "suffix": "|retry1"
+      }
+    },
+    "condition_label": "separately trained, low-overlap policies (NOT unrestricted independent draws)",
+    "max_abs_cos_nonshared": 0.5,
+    "rule": "|cos| <= max_abs_cos for every NONSHARED adapter pair within a context",
+    "selection_input": "target weights only; no model behaviour, no held-out performance"
+  },
+  "scenario_pool": {
+    "n_candidates": 1365,
+    "n_usable": 1365,
+    "path": "/private/tmp/claude-501/-Users-calypsocalcott-claudine/9ca75967-3a87-4bd8-be29-ada33a670694/scratchpad/self-interpretability/data/candidate_scenarios.json",
+    "sha256": "1514e4bc8a585e92f46ff33f3372ceb7fed2ef7c4fd0ccfc03f24110acef9613"
+  },
+  "stats": {
+    "common_pairs": {
+      "policy_val": 960,
+      "relational": 640,
+      "self_pred": 640
+    },
+    "ties_resampled": {
+      "policy_val": 0,
+      "relational": 0,
+      "self_pred": 0,
+      "train_A1": 0,
+      "train_A2": 0,
+      "train_B1": 0,
+      "train_B2": 0
+    },
+    "train_pairs": {
+      "A1": 3200,
+      "A2": 3200,
+      "B1": 3200,
+      "B2": 3200
+    }
+  },
+  "status": "ACTIVE",
+  "supersedes": {
+    "archived_at": "data/design/archive/manifest_v1_rejected.json",
+    "file_hashes": {
+      "data/common/policy_val_keys.csv": "538b8570597eca4ac5920b77fd6baf62bfe7a02ee2554923fcac1e8d8f2fd175",
+      "data/common/policy_val_prompts.jsonl": "af0e8a39ad1cd916c153e91b724f1f738882b5723e0b8b6c2f6990e6c5763530",
+      "data/common/relational_keys.csv": "b9fae5ecd3159b212ff5596b4505b4259a167dcd4b650e9b63e0657328b28ed9",
+      "data/common/relational_prompts.jsonl": "619b4f55ccc562a6db114b504d35b80a7fd21a0a5f16471d0a7ffbaee43f14af",
+      "data/common/self_pred_keys.csv": "6a16abfb8f378ca5e76022603904d477b1d1025cc4b5413d1e8d00a4a2180191",
+      "data/common/self_pred_prompts.jsonl": "637c031131defa19364a457e859a8747fd0a3a4fb7ce5a905534a80f2277eca1",
+      "data/design/contexts.csv": "702886d65a7c1b2e8a0fd696fb0a55238e71cb1c12c1888c07709f0d0097e83d",
+      "data/design/target_policies.csv": "18127e5a1113573c3012bc3abb5621815c20b2e46f642590d5e23b28a179c332",
+      "data/train/A1/train_full.jsonl": "ad0e3e3f5ccfc694ceeb3760ef6945fb4adfc50a0057f85e0692d62a8f1d9063",
+      "data/train/A1/train_sft.jsonl": "9c9d3fd8e55781dc9a9ccbd42185af0131907ac955d935a64fb98a805114c6a8",
+      "data/train/A2/train_full.jsonl": "a7fd87fa5eb1caec2076cbffb0a7c9bee8027c1dd6e21be3d7c6d946e23006dc",
+      "data/train/A2/train_sft.jsonl": "4a10fdf65be9a04b21ecf9a9af304377a88033c343f17145147c1d7a6a9d1304",
+      "data/train/B1/train_full.jsonl": "2b8941b742de5221fb72b589edf871ce2a7b332226f72255291f416a17501f31",
+      "data/train/B1/train_sft.jsonl": "a9ea3db41731107d154c8d85c7b2121faf90efa9681b5c3ec8241af685425e35",
+      "data/train/B2/train_full.jsonl": "60f20fd3b97d0c94ac6f13079a7b3035b4c9862b726af3b9ea49c9c10e8a82a7",
+      "data/train/B2/train_sft.jsonl": "86fa4268bc7ea4bdcf886a43113cb6c0602f111e7e2de2b50edf46e8b6c68eed"
+    },
+    "manifest_version": 1,
+    "reason": "Unrestricted independent policy draws produced chance-collinear nonshared pairs (C15 A2-B1 cos=+0.961; C10 B1-B2 cos=-0.858; C08 A1-B2 cos=+0.786), weakening the shared-vs-nonshared contrast. Superseded by v2 with |cos|<=0.50 constraint.",
+    "status": "REJECTED"
+  }
+}

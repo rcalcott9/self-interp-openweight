@@ -1,0 +1,8 @@
+# Adapter A1, full 7B run. Inherits the frozen configs unchanged; sets only the
+# adapter and the device. No scientific deviation.
+run_tag: a1_qwen7b
+device: cuda
+data:
+  adapter: A1
+  contexts: null                     # all 16
+  train_examples_per_context: null   # all 200

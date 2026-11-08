@@ -1,0 +1,17 @@
+# v3 acquisition evaluation. FROZEN 2026-09-03.
+# Generation budget is deliberately generous: a tight max_new_tokens truncates
+# nontermination into something that merely looks malformed, which is how the
+# A2-v2 termination failure escaped direct measurement.
+free_generation:
+  max_new_tokens: 32          # >= 16 required; A2-v2 was only ever given 8
+  pairs_per_context: 60
+  apply_to: [base, adapter]
+  validity:
+    require_exactly_one_choice: true
+    require_normal_termination: true
+    forbid_repeated_choice_string: true
+    must_satisfy_existing_parser: true
+  thresholds:
+    max_malformed_rate: 0.02
+    max_nontermination_rate: 0.02
+    max_repeated_choice_rate: 0.02

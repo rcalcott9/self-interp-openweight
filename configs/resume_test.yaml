@@ -1,0 +1,30 @@
+# LOCAL HARNESS TEST ONLY. Exercises checkpoint/resume. Not a scientific run.
+smoke: true
+run_tag: resume_test
+device: mps
+model:
+  base_model_id: "Qwen/Qwen2.5-0.5B-Instruct"
+  base_revision: "7ae557604adf67be50417f59c2c2f167def9a775"
+  tokenizer_id: "Qwen/Qwen2.5-0.5B-Instruct"
+  dtype: float32
+lora:
+  r: 4
+  lora_alpha: 8
+train:
+  num_train_epochs: 3
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 1
+  logging_steps: 1
+  save_steps: 3
+  save_total_limit: 2
+data:
+  adapter: A1
+  contexts: ["C03"]
+  train_examples_per_context: 16     # 16/4 = 4 steps/epoch x 3 = 12 steps total
+eval:
+  policy_val_pairs_per_context: 2
+  freegen_pairs_per_context: 2
+  batch_size: 4
+  sampling:
+    n_samples: 2
+    pairs_per_context: 2

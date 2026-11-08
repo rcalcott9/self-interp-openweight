@@ -1,0 +1,347 @@
+{
+  "gate": "ACQUISITION GATE v3 (policy_val only; policy_test untouched)",
+  "A1": {
+    "adapter": "A1",
+    "run": "runs/20260904_031556_a1_acq_qwen7b",
+    "accuracy": {
+      "adapter": 0.9208333333333333,
+      "adapter_ci": [
+        0.89375,
+        0.9458333333333333
+      ],
+      "base": 0.48854166666666665,
+      "base_ci": [
+        0.39687500000000003,
+        0.5760416666666668
+      ]
+    },
+    "D1": {
+      "improvement": 0.4322916666666667,
+      "ci": [
+        0.33958333333333335,
+        0.5291666666666667
+      ],
+      "threshold": 0.2,
+      "passed": true
+    },
+    "D2": {
+      "n_context_families": 16,
+      "n_adapter_gt_base": 16,
+      "n_ge_070": 16,
+      "thresholds": [
+        12,
+        10
+      ],
+      "per_context": {
+        "C01": [
+          0.9333333333333333,
+          0.1
+        ],
+        "C02": [
+          0.85,
+          0.5
+        ],
+        "C03": [
+          0.9666666666666667,
+          0.75
+        ],
+        "C04": [
+          0.9666666666666667,
+          0.6833333333333333
+        ],
+        "C05": [
+          0.9333333333333333,
+          0.48333333333333334
+        ],
+        "C06": [
+          0.9166666666666666,
+          0.6666666666666666
+        ],
+        "C07": [
+          0.9833333333333333,
+          0.5666666666666667
+        ],
+        "C08": [
+          0.9666666666666667,
+          0.4166666666666667
+        ],
+        "C09": [
+          0.9,
+          0.2833333333333333
+        ],
+        "C10": [
+          0.95,
+          0.26666666666666666
+        ],
+        "C11": [
+          0.9166666666666666,
+          0.31666666666666665
+        ],
+        "C12": [
+          0.8833333333333333,
+          0.6
+        ],
+        "C13": [
+          0.9166666666666666,
+          0.5
+        ],
+        "C14": [
+          0.9166666666666666,
+          0.5666666666666667
+        ],
+        "C15": [
+          0.8833333333333333,
+          0.4
+        ],
+        "C16": [
+          0.85,
+          0.7166666666666667
+        ]
+      },
+      "passed": true
+    },
+    "D3": {
+      "source": "termination_aware_v3",
+      "malformed_rate": 0.0,
+      "nontermination_rate": 0.0,
+      "repeated_choice_rate": 0.0,
+      "valid_rate": 1.0,
+      "len_p50": 1,
+      "len_max": 1,
+      "threshold_malformed": 0.02,
+      "passed": true
+    },
+    "D4": {
+      "improvement_raw": 0.4197916666666667,
+      "improvement_order_averaged": 0.4322916666666667,
+      "relative_drop": -0.029776674937965285,
+      "threshold": 0.25,
+      "passed": true,
+      "note": "DIRECTIONAL: blocks only if order-averaging REDUCES the improvement by >25%"
+    },
+    "bias": {
+      "adapter_p_choose_first": 0.4921875,
+      "base_p_choose_first": 0.6609375,
+      "adapter_order_consistency": 0.884375
+    },
+    "choice_loss": {
+      "full_completion_loss": 0.0673,
+      "choice_token_ce": 0.201775,
+      "chance_ln2": 0.6931471805599453,
+      "margin_below_chance": 0.49137218055994525,
+      "passed": true
+    },
+    "step_counts": {
+      "n_train_examples": 5120,
+      "epochs": 3,
+      "per_device_train_batch_size": 8,
+      "gradient_accumulation_steps": 2,
+      "world_size": 1,
+      "effective_batch_size": 16,
+      "microsteps_per_epoch": 640,
+      "optimizer_steps_per_epoch": 320,
+      "total_microsteps": 1920,
+      "total_optimizer_steps": 960,
+      "total_example_presentations": 15360,
+      "note": "total_optimizer_steps is HuggingFace `global_step` and is what a run log's `steps=` field reports. It is NOT the number of forward/backward passes (microsteps) nor of example presentations."
+    }
+  },
+  "A2": {
+    "adapter": "A2",
+    "run": "runs/20260904_011510_a2_acq_qwen7b",
+    "accuracy": {
+      "adapter": 0.4895833333333333,
+      "adapter_ci": [
+        0.4479166666666667,
+        0.53125
+      ],
+      "base": 0.47708333333333336,
+      "base_ci": [
+        0.388515625,
+        0.5635416666666666
+      ]
+    },
+    "D1": {
+      "improvement": 0.0125,
+      "ci": [
+        -0.08958333333333332,
+        0.11669270833333296
+      ],
+      "threshold": 0.2,
+      "passed": false
+    },
+    "D2": {
+      "n_context_families": 16,
+      "n_adapter_gt_base": 9,
+      "n_ge_070": 0,
+      "thresholds": [
+        12,
+        10
+      ],
+      "per_context": {
+        "C01": [
+          0.48333333333333334,
+          0.1
+        ],
+        "C02": [
+          0.55,
+          0.5
+        ],
+        "C03": [
+          0.43333333333333335,
+          0.75
+        ],
+        "C04": [
+          0.5333333333333333,
+          0.6833333333333333
+        ],
+        "C05": [
+          0.38333333333333336,
+          0.48333333333333334
+        ],
+        "C06": [
+          0.55,
+          0.25
+        ],
+        "C07": [
+          0.5,
+          0.6333333333333333
+        ],
+        "C08": [
+          0.5833333333333334,
+          0.4166666666666667
+        ],
+        "C09": [
+          0.45,
+          0.43333333333333335
+        ],
+        "C10": [
+          0.55,
+          0.26666666666666666
+        ],
+        "C11": [
+          0.4166666666666667,
+          0.5166666666666667
+        ],
+        "C12": [
+          0.48333333333333334,
+          0.6
+        ],
+        "C13": [
+          0.4166666666666667,
+          0.38333333333333336
+        ],
+        "C14": [
+          0.48333333333333334,
+          0.45
+        ],
+        "C15": [
+          0.5333333333333333,
+          0.45
+        ],
+        "C16": [
+          0.48333333333333334,
+          0.7166666666666667
+        ]
+      },
+      "passed": false
+    },
+    "D3": {
+      "source": "termination_aware_v3",
+      "malformed_rate": 0.0,
+      "nontermination_rate": 0.0,
+      "repeated_choice_rate": 0.0,
+      "valid_rate": 1.0,
+      "len_p50": 1,
+      "len_max": 1,
+      "threshold_malformed": 0.02,
+      "passed": true
+    },
+    "D4": {
+      "improvement_raw": 0.015625,
+      "improvement_order_averaged": 0.0125,
+      "relative_drop": 0.19999999999999996,
+      "threshold": 0.25,
+      "passed": true,
+      "note": "DIRECTIONAL: blocks only if order-averaging REDUCES the improvement by >25%"
+    },
+    "bias": {
+      "adapter_p_choose_first": 0.0890625,
+      "base_p_choose_first": 0.6609375,
+      "adapter_order_consistency": 0.15104166666666666
+    },
+    "choice_loss": {
+      "full_completion_loss": 0.2316,
+      "choice_token_ce": 0.694636,
+      "chance_ln2": 0.6931471805599453,
+      "margin_below_chance": -0.001488819440054745,
+      "passed": false
+    },
+    "step_counts": {
+      "n_train_examples": 5120,
+      "epochs": 3,
+      "per_device_train_batch_size": 8,
+      "gradient_accumulation_steps": 2,
+      "world_size": 1,
+      "effective_batch_size": 16,
+      "microsteps_per_epoch": 640,
+      "optimizer_steps_per_epoch": 320,
+      "total_microsteps": 1920,
+      "total_optimizer_steps": 960,
+      "total_example_presentations": 15360,
+      "note": "total_optimizer_steps is HuggingFace `global_step` and is what a run log's `steps=` field reports. It is NOT the number of forward/backward passes (microsteps) nor of example presentations."
+    }
+  },
+  "D5_prime_discriminating": {
+    "n_discriminating_stimuli": 245,
+    "n_discriminating_evaluated": 245,
+    "coverage_warning": null,
+    "per_adapter": {
+      "A1": {
+        "n_discriminating": 245,
+        "acc_own_policy": 0.8979591836734694,
+        "ci": [
+          0.8355885804086854,
+          0.9435334269713578
+        ],
+        "acc_other_policy": 0.10204081632653061,
+        "threshold_acc": 0.6,
+        "chance": 0.5,
+        "rule": "acc >= 0.60 AND 95% CI lower bound > 0.500",
+        "passed": true,
+        "blocking": false
+      },
+      "A2": {
+        "n_discriminating": 245,
+        "acc_own_policy": 0.47346938775510206,
+        "ci": [
+          0.3880871907071383,
+          0.5572387172110748
+        ],
+        "acc_other_policy": 0.5265306122448979,
+        "threshold_acc": 0.6,
+        "chance": 0.5,
+        "rule": "acc >= 0.60 AND 95% CI lower bound > 0.500",
+        "passed": false,
+        "blocking": false
+      }
+    },
+    "confusion_matrix": {
+      "A1": {
+        "matches_A1_target": 0.8979591836734694,
+        "matches_A2_target": 0.10204081632653061
+      },
+      "A2": {
+        "matches_A1_target": 0.5265306122448979,
+        "matches_A2_target": 0.47346938775510206
+      }
+    },
+    "note": "rows = trained adapter, columns = which target policy the held-out behaviour matches, on discriminating stimuli only"
+  },
+  "per_adapter_pass": {
+    "A1": true,
+    "A2": false
+  },
+  "BOTH_ADAPTERS_PASS": false,
+  "verdict": "STOP - acquisition not established; do not proceed to Gate 2 or introspection"
+}

@@ -1,0 +1,10 @@
+# A1 under recipe v2. Differs from configs/a2v2_cloud.yaml ONLY in adapter identity
+# and run tag. Nothing is tuned on A2-v2 results.
+run_tag: a1v2_qwen7b
+device: cuda
+train:
+  loss_mode: choice_only
+data:
+  adapter: A1
+  contexts: null
+  train_examples_per_context: null

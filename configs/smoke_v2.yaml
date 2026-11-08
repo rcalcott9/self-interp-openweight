@@ -1,0 +1,29 @@
+# v2 SMOKE OVERLAY. Same structure as smoke.yaml; adds loss_mode: choice_only.
+smoke: true
+run_tag: smokev2_qwen05b
+device: mps
+model:
+  base_model_id: "Qwen/Qwen2.5-0.5B-Instruct"
+  base_revision: "7ae557604adf67be50417f59c2c2f167def9a775"
+  tokenizer_id: "Qwen/Qwen2.5-0.5B-Instruct"
+  dtype: float32          # SMOKE-ONLY
+lora:
+  r: 8                    # SMOKE-ONLY
+  lora_alpha: 16
+train:
+  loss_mode: choice_only  # the v2 change under test
+  num_train_epochs: 1
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 1
+  logging_steps: 5
+data:
+  adapter: A1
+  contexts: ["C03", "C01"]
+  train_examples_per_context: 100
+eval:
+  policy_val_pairs_per_context: 20
+  freegen_pairs_per_context: 8
+  batch_size: 8
+  sampling:
+    n_samples: 4
+    pairs_per_context: 8

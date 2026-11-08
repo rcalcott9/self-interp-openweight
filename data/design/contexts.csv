@@ -1,0 +1,17 @@
+context_id,scenario_name,question,overlap_A,overlap_B,assigned_consistency,attr1,attr2,attr3,attr4,attr5
+C01,C01_shrub,Which shrub would you prefer for your garden?,shared,independent,weak,mature_height,bloom_duration,drought_tolerance,growth_rate,density
+C02,C02_ereader,Which e-reader would you prefer?,shared,independent,weak,screen_size,storage_capacity,battery_life,screen_resolution,front_light_brightness
+C03,C03_canvas_board,Which canvas board would you prefer?,shared,independent,strong,surface_texture_depth,board_thickness,surface_absorbency,dimensional_stability,surface_durability
+C04,C04_sudoku_book,Which sudoku puzzle book would you prefer?,shared,independent,strong,puzzle_count,grid_size,paper_thickness,difficulty_variety,margin_space
+C05,C05_rv_generator,Which RV generator would you prefer?,shared,independent,weak,power_output,noise_level,run_time,weight,fuel_efficiency
+C06,C06_measuring_spoons,Which set of measuring spoons would you prefer?,independent,shared,weak,number_of_spoons,handle_length,marking_durability,bowl_depth,ring_diameter
+C07,C07_bluetooth_adapter,Which Bluetooth car adapter would you prefer?,independent,shared,weak,bluetooth_range,audio_quality,battery_life,connection_time,noise_reduction
+C08,C08_ladder,Which ladder would you prefer?,shared,independent,weak,max_height,weight_capacity,ladder_weight,step_width,storage_length
+C09,C09_flares,Which roadside flares would you prefer?,independent,shared,strong,burn_time,visibility_distance,water_resistance,shelf_life,light_intensity
+C10,C10_earrings,Which pair of earrings would you prefer?,shared,independent,strong,weight_per_earring,length,sparkle_rating,durability,hypoallergenic_rating
+C11,C11_headlight,Which headlight replacement bulb would you prefer?,independent,shared,strong,light_output,expected_lifespan,beam_distance,color_temperature,power_consumption
+C12,C12_bowl,Which serving bowl would you prefer?,independent,shared,strong,diameter,depth,weight,heat_retention,dishwasher_cycles_before_degradation
+C13,C13_internship,Which internship opportunity would you prefer?,independent,shared,weak,duration,mentorship_time,company_prestige,skill_development,conversion_rate
+C14,C14_pickup_truck,Which pickup truck would you prefer?,independent,shared,strong,bed_length,towing_capacity,payload_capacity,ground_clearance,fuel_efficiency
+C15,C15_cornhole_set,Which cornhole set would you prefer?,independent,shared,weak,board_weight,surface_smoothness,bean_bag_durability,board_stability,water_resistance
+C16,C16_rowing_machine,Which rowing machine would you prefer?,shared,independent,strong,resistance_levels,rail_length,seat_height,monitor_size,noise_level

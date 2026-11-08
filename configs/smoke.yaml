@@ -1,0 +1,31 @@
+# SMOKE-TEST OVERLAY. Applies on top of the frozen 7B configs.
+# Every key here is an explicitly marked smoke-only deviation. The frozen
+# configs are NEVER edited on the basis of this model's scientific performance.
+smoke: true
+run_tag: smoke_qwen05b
+device: mps
+model:
+  base_model_id: "Qwen/Qwen2.5-0.5B-Instruct"
+  base_revision: "7ae557604adf67be50417f59c2c2f167def9a775"
+  tokenizer_id: "Qwen/Qwen2.5-0.5B-Instruct"
+  dtype: float32          # SMOKE-ONLY: bf16 on MPS is unreliable; 7B run stays bf16
+lora:
+  r: 8                    # SMOKE-ONLY: 7B run stays r=32
+  lora_alpha: 16
+train:
+  num_train_epochs: 1
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 1
+  logging_steps: 5
+  seed: 41
+data:
+  adapter: A1
+  contexts: ["C03", "C01"]              # one strong, one weak
+  train_examples_per_context: 100       # SMOKE-ONLY: 7B run uses all 200 x 16
+eval:
+  policy_val_pairs_per_context: 20      # SMOKE-ONLY: 7B run uses all 60
+  freegen_pairs_per_context: 8          # SMOKE-ONLY: 7B run uses 60
+  batch_size: 8
+  sampling:                             # scientific values UNCHANGED; sizes reduced
+    n_samples: 4                        # SMOKE-ONLY: 7B run uses 16
+    pairs_per_context: 8                # SMOKE-ONLY: 7B run uses 30

@@ -1,0 +1,29 @@
+# FROZEN 2026-08-31.
+logit_measure:
+  compare_tokens: [A, B]
+  position: first_assistant_content_token
+  tokenization_gate: hard_fail        # abort if either letter is not a single distinct token
+sampling:
+  temperature: 1.0
+  top_p: 1.0
+  top_k: 0
+  n_samples: 16
+  max_new_tokens: 4
+  pairs_per_context: 30               # subset of policy_val used for repeated sampling
+  orders: both
+  apply_to: [base, adapter]
+# Operational sizes (not scientific parameters).
+policy_val_pairs_per_context: 60
+freegen_pairs_per_context: 60
+batch_size: 32
+predictability:
+  primary: same_order_match
+  same_order_match: "[nA*(nA-1) + nB*(nB-1)] / [N*(N-1)]  with N = all samples incl. malformed"
+  modal_concentration: "max(nA,nB) / N  (unconditional)"
+  cross_order_match: "[nAB_A*nBA_B + nAB_B*nBA_A] / (N*N)  (secondary robustness)"
+  conditional_on_valid: secondary_diagnostic
+  entropy: miller_madow over {A,B,malformed}
+bootstrap:
+  scheme: hierarchical_cluster        # resample contexts, then instances within context
+  n_boot: 10000
+  seed: 90210

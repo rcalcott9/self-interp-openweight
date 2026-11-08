@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+*.key
+id_*
+!id_*.pub.example
+runs/
+data/**/*.jsonl.gz
+.DS_Store
+.ipynb_checkpoints/
+node_modules/
+venv/
+.wrangler/
+.Rhistory
+# Large files kept local only (>50 MB)
+/runs/20260904_011510_a2_acq_qwen7b/adapter/adapter_model.safetensors
+/runs/20260903_170443_a2_qwen7b/adapter/adapter_model.safetensors
+/runs/20260904_031556_a1_acq_qwen7b/adapter/adapter_model.safetensors
+/runs/20260903_195207_a2v2_qwen7b/adapter/adapter_model.safetensors
+/runs/20260902_230634_a1_qwen7b/adapter/adapter_model.safetensors

@@ -1,0 +1,14 @@
+# A2 under the v3 ACQUISITION recipe. Differs from a2v2_cloud.yaml in:
+#   run_family (enables the acquisition guards), loss_mode (full completion
+#   supervision restored), and the data source (v3 deterministic 5,120-example set).
+# Scientific parameters - seed, epochs, lr, batch, LoRA rank, base revision - are
+# unchanged from the v1/v2 runs.
+run_family: acq
+run_tag: a2_acq_qwen7b
+device: cuda
+train:
+  loss_mode: completion    # choice + formatting + <|im_end|> ALL supervised
+data:
+  adapter: A2
+  contexts: null
+  train_examples_per_context: null

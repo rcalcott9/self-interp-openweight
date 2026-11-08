@@ -1,0 +1,21 @@
+# FROZEN 2026-08-31. Changing any value here invalidates every artifact in data/.
+master_seed: 20260831
+n_contexts: 16
+n_attributes: 5
+adapters: [A1, A2, B1, B2]
+pairs:
+  A: [A1, A2]
+  B: [B1, B2]
+# Cell structure: 4 contexts per (overlap x reliability) cell, per pair.
+# Overlap is counterbalanced: a context shared for pair A is independent for pair B.
+cells_per_condition: 4
+max_consecutive_run: 2      # rejection constraint on the randomised assignment
+weight_range: [-100, 100]
+weight_normalise_max_abs: 100
+# Nonshared policy pairs within a context are constrained to low overlap by
+# rejection sampling. The resulting cells are "separately trained, low-overlap
+# policies", NOT unrestricted independent draws. Documented consequence.
+max_abs_cos_nonshared: 0.50
+policy_max_redraw_attempts: 2000
+scenario_pool: "candidate_scenarios.json"
+scenario_pool_sha256_prefix: null   # filled by provenance at generation time

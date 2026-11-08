@@ -1,0 +1,96 @@
+{
+  "configs": {
+    "data": "7fdacedbdd147f9e50d45a23959bda2cec70e25b7adc5f8940499027fd93b6f3",
+    "design": "c11f7b0ac9121ba4cc5d72c534d7c1edaf6709cd15ee50172e9f71e939cbc59a",
+    "eval": "448889d08dc1fcb3833b22af7caf11e564fdec0b54588d252915b83364965860",
+    "lora": "acfddf432f01961863159160cef08511310ff52b9851543f8618be31d96b561c",
+    "model": "523f5a8991f35ea705f27f45a1cefd4a5d29daafef1ad8c67226ac6df23ab9d1",
+    "prompt": "6583a878a51eb4275b7d88676a41e5ed31f823bc7dde4c1ba453bd41957ccda4",
+    "train": "4b716ca5361b22cedc1032b1d3e778b69842d2b10c9a532e9c1ae38b1dda3aea"
+  },
+  "design": {
+    "attempts": 2,
+    "cells": [
+      [
+        3,
+        4,
+        10,
+        16
+      ],
+      [
+        1,
+        2,
+        5,
+        8
+      ],
+      [
+        9,
+        11,
+        12,
+        14
+      ],
+      [
+        6,
+        7,
+        13,
+        15
+      ]
+    ]
+  },
+  "files": {
+    "data/common/policy_val_keys.csv": "538b8570597eca4ac5920b77fd6baf62bfe7a02ee2554923fcac1e8d8f2fd175",
+    "data/common/policy_val_prompts.jsonl": "af0e8a39ad1cd916c153e91b724f1f738882b5723e0b8b6c2f6990e6c5763530",
+    "data/common/relational_keys.csv": "b9fae5ecd3159b212ff5596b4505b4259a167dcd4b650e9b63e0657328b28ed9",
+    "data/common/relational_prompts.jsonl": "619b4f55ccc562a6db114b504d35b80a7fd21a0a5f16471d0a7ffbaee43f14af",
+    "data/common/self_pred_keys.csv": "6a16abfb8f378ca5e76022603904d477b1d1025cc4b5413d1e8d00a4a2180191",
+    "data/common/self_pred_prompts.jsonl": "637c031131defa19364a457e859a8747fd0a3a4fb7ce5a905534a80f2277eca1",
+    "data/design/contexts.csv": "702886d65a7c1b2e8a0fd696fb0a55238e71cb1c12c1888c07709f0d0097e83d",
+    "data/design/target_policies.csv": "18127e5a1113573c3012bc3abb5621815c20b2e46f642590d5e23b28a179c332",
+    "data/train/A1/train_full.jsonl": "ad0e3e3f5ccfc694ceeb3760ef6945fb4adfc50a0057f85e0692d62a8f1d9063",
+    "data/train/A1/train_sft.jsonl": "9c9d3fd8e55781dc9a9ccbd42185af0131907ac955d935a64fb98a805114c6a8",
+    "data/train/A2/train_full.jsonl": "a7fd87fa5eb1caec2076cbffb0a7c9bee8027c1dd6e21be3d7c6d946e23006dc",
+    "data/train/A2/train_sft.jsonl": "4a10fdf65be9a04b21ecf9a9af304377a88033c343f17145147c1d7a6a9d1304",
+    "data/train/B1/train_full.jsonl": "2b8941b742de5221fb72b589edf871ce2a7b332226f72255291f416a17501f31",
+    "data/train/B1/train_sft.jsonl": "a9ea3db41731107d154c8d85c7b2121faf90efa9681b5c3ec8241af685425e35",
+    "data/train/B2/train_full.jsonl": "60f20fd3b97d0c94ac6f13079a7b3035b4c9862b726af3b9ea49c9c10e8a82a7",
+    "data/train/B2/train_sft.jsonl": "86fa4268bc7ea4bdcf886a43113cb6c0602f111e7e2de2b50edf46e8b6c68eed"
+  },
+  "generated_by": {
+    "executable": "/opt/anaconda3/bin/python3",
+    "numpy": "1.26.4",
+    "platform": "macOS-15.5-arm64-arm-64bit",
+    "python": "3.12.7"
+  },
+  "manifest_version": 1,
+  "master_seed": 20260831,
+  "rejection_reason": "Unrestricted independent policy draws produced chance-collinear nonshared pairs (C15 A2-B1 cos=+0.961; C10 B1-B2 cos=-0.858; C08 A1-B2 cos=+0.786), weakening the shared-vs-nonshared contrast. Superseded by v2 with |cos|<=0.50 constraint.",
+  "scenario_pool": {
+    "n_candidates": 1365,
+    "n_usable": 1365,
+    "path": "/private/tmp/claude-501/-Users-calypsocalcott-claudine/9ca75967-3a87-4bd8-be29-ada33a670694/scratchpad/self-interpretability/data/candidate_scenarios.json",
+    "sha256": "1514e4bc8a585e92f46ff33f3372ceb7fed2ef7c4fd0ccfc03f24110acef9613"
+  },
+  "stats": {
+    "common_pairs": {
+      "policy_val": 960,
+      "relational": 640,
+      "self_pred": 640
+    },
+    "ties_resampled": {
+      "policy_val": 0,
+      "relational": 0,
+      "self_pred": 0,
+      "train_A1": 0,
+      "train_A2": 0,
+      "train_B1": 0,
+      "train_B2": 0
+    },
+    "train_pairs": {
+      "A1": 3200,
+      "A2": 3200,
+      "B1": 3200,
+      "B2": 3200
+    }
+  },
+  "status": "REJECTED"
+}

@@ -1,0 +1,5 @@
+# Used for design + dataset generation only. Pinned to the interpreter that
+# actually generated data/ (see data/design/manifest.json).
+numpy==1.26.4
+PyYAML==6.0.1
+pytest==7.4.4

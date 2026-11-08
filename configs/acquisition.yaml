@@ -1,0 +1,35 @@
+# Acquisition recipe (v3). FROZEN 2026-09-03, before any v3 model exists.
+#
+# Contexts and target policies are NOT redefined here: they are regenerated
+# byte-identically from configs/design.yaml + the recorded scenario pool, so the
+# sealed policy_test remains valid and the 8-shared / 8-low-overlap structure is
+# preserved exactly.
+#
+# What v3 changes relative to the frozen data/train/ sets:
+#   1. labels are DETERMINISTIC   (no weak-context flip; label == target always)
+#   2. volume 200 -> 320 pairs per context  (3,200 -> 5,120 per adapter)
+#   3. exact A/B target and AB/BA order balance by winner-stratified order
+#      assignment (no pair is rejected, so the stimulus distribution is untouched)
+#
+# It does NOT change: contexts, questions, attributes, target weights, the prompt
+# template, the tie tolerance, or any held-out split.
+
+version: 3
+run_family: acq
+train_pairs_per_context: 320        # x 16 contexts = 5,120 demonstrations per adapter
+deterministic_labels: true          # label_letter == target_letter for every row
+weak_context_flip_fraction: 0.0     # v1 used 0.35 on 8 contexts; removed in v3
+
+# Order assignment. For each context and adapter, pairs are partitioned by which
+# UNDERLYING option the policy prefers, then within each group a uniform random
+# subset is shown as AB and the rest as BA. Counts are solved so that both the
+# A/B target split and the AB/BA order split are exactly n/2 when the number of
+# option_0-winners is even (off by at most one row per context otherwise).
+# Because every drawn pair is used and the subset is uniform WITHIN a winner
+# group, this cannot select on utility margin.
+order_assignment: winner_stratified_exact
+
+adapters: [A1, A2]                  # acquisition-only replication: A-pair only
+scenario_pool: data/design/candidate_scenarios.json
+scenario_pool_sha256: "1514e4bc8a585e92f46ff33f3372ceb7fed2ef7c4fd0ccfc03f24110acef9613"
+output_dir: data/acquisition        # new tree; data/train/ is never overwritten

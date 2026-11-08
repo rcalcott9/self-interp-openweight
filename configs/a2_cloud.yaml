@@ -1,0 +1,9 @@
+# Adapter A2, full 7B run. Identical to configs/a1_cloud.yaml except the adapter
+# identity and the run tag. Inherits the frozen model/lora/train/eval configs
+# unchanged. No scientific deviation.
+run_tag: a2_qwen7b
+device: cuda
+data:
+  adapter: A2
+  contexts: null                     # all 16
+  train_examples_per_context: null   # all 200

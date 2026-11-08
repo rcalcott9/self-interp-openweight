@@ -1,0 +1,9 @@
+# FROZEN 2026-08-31.
+splits:
+  train:        {n_pairs_per_context: 200, scope: per_adapter, orders: balanced}
+  policy_val:   {n_pairs_per_context: 60,  scope: common,      orders: both}
+  self_pred:    {n_pairs_per_context: 40,  scope: common,      orders: both}
+  relational:   {n_pairs_per_context: 40,  scope: common,      orders: both}
+weak_context_flip_fraction: 0.35   # applied to TRAINING labels only
+tie_rel_tolerance: 1.0e-9          # reject iff |dU| <= tol * max(1,|U_A|,|U_B|)
+max_resample_attempts: 100

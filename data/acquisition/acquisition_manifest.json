@@ -1,0 +1,307 @@
+{
+  "version": 3,
+  "status": "ACTIVE",
+  "family": "acquisition",
+  "generated_by": {
+    "python": "3.12.7",
+    "executable": "/Users/calypsocalcott/Desktop/Coordination/self-interp-openweight/.venv/bin/python",
+    "platform": "macOS-15.5-arm64-arm-64bit",
+    "numpy": "1.26.4"
+  },
+  "master_seed": 20260831,
+  "derived_from": {
+    "design_config": "796f56970236a4a5127862aeb0e59e797ff72f08bd67c22b04ea898acce8aeee",
+    "prompt_config": "6583a878a51eb4275b7d88676a41e5ed31f823bc7dde4c1ba453bd41957ccda4",
+    "acquisition_config": "05d4f3a32753ed4ad9261bb9de3b39085c5e4b71a61aef02e28fd03551134304",
+    "scenario_pool_sha256": "1514e4bc8a585e92f46ff33f3372ceb7fed2ef7c4fd0ccfc03f24110acef9613"
+  },
+  "invariants": {
+    "target_policies_unchanged": true
+  },
+  "train_pairs_per_context": 320,
+  "adapters": [
+    "A1",
+    "A2"
+  ],
+  "n_examples_per_adapter": {
+    "A1": 5120,
+    "A2": 5120
+  },
+  "disjointness_sources": {
+    "data/train/A1/train_full.jsonl": 3200,
+    "data/train/A2/train_full.jsonl": 3200,
+    "data/train/B1/train_full.jsonl": 3200,
+    "data/train/B2/train_full.jsonl": 3200,
+    "data/common/policy_val_prompts.jsonl": 1920,
+    "data/common/self_pred_prompts.jsonl": 1280,
+    "data/common/relational_prompts.jsonl": 1280,
+    "data/common/policy_test_prompts.jsonl (pair_hash only)": 1920
+  },
+  "order_assignment": {
+    "scheme": "winner_stratified_exact",
+    "per_cell": {
+      "A1|C01": {
+        "n_option0_winners": 158,
+        "n_option1_winners": 162,
+        "a_option0_shown_AB": 79,
+        "b_option1_shown_AB": 81,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A1|C02": {
+        "n_option0_winners": 164,
+        "n_option1_winners": 156,
+        "a_option0_shown_AB": 82,
+        "b_option1_shown_AB": 78,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A1|C03": {
+        "n_option0_winners": 154,
+        "n_option1_winners": 166,
+        "a_option0_shown_AB": 77,
+        "b_option1_shown_AB": 83,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A1|C04": {
+        "n_option0_winners": 155,
+        "n_option1_winners": 165,
+        "a_option0_shown_AB": 77,
+        "b_option1_shown_AB": 83,
+        "n0_even": false,
+        "ties_resampled": 0
+      },
+      "A1|C05": {
+        "n_option0_winners": 152,
+        "n_option1_winners": 168,
+        "a_option0_shown_AB": 76,
+        "b_option1_shown_AB": 84,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A1|C06": {
+        "n_option0_winners": 164,
+        "n_option1_winners": 156,
+        "a_option0_shown_AB": 82,
+        "b_option1_shown_AB": 78,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A1|C07": {
+        "n_option0_winners": 166,
+        "n_option1_winners": 154,
+        "a_option0_shown_AB": 83,
+        "b_option1_shown_AB": 77,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A1|C08": {
+        "n_option0_winners": 161,
+        "n_option1_winners": 159,
+        "a_option0_shown_AB": 80,
+        "b_option1_shown_AB": 80,
+        "n0_even": false,
+        "ties_resampled": 0
+      },
+      "A1|C09": {
+        "n_option0_winners": 167,
+        "n_option1_winners": 153,
+        "a_option0_shown_AB": 83,
+        "b_option1_shown_AB": 77,
+        "n0_even": false,
+        "ties_resampled": 0
+      },
+      "A1|C10": {
+        "n_option0_winners": 170,
+        "n_option1_winners": 150,
+        "a_option0_shown_AB": 85,
+        "b_option1_shown_AB": 75,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A1|C11": {
+        "n_option0_winners": 168,
+        "n_option1_winners": 152,
+        "a_option0_shown_AB": 84,
+        "b_option1_shown_AB": 76,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A1|C12": {
+        "n_option0_winners": 140,
+        "n_option1_winners": 180,
+        "a_option0_shown_AB": 70,
+        "b_option1_shown_AB": 90,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A1|C13": {
+        "n_option0_winners": 174,
+        "n_option1_winners": 146,
+        "a_option0_shown_AB": 87,
+        "b_option1_shown_AB": 73,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A1|C14": {
+        "n_option0_winners": 151,
+        "n_option1_winners": 169,
+        "a_option0_shown_AB": 75,
+        "b_option1_shown_AB": 85,
+        "n0_even": false,
+        "ties_resampled": 0
+      },
+      "A1|C15": {
+        "n_option0_winners": 155,
+        "n_option1_winners": 165,
+        "a_option0_shown_AB": 77,
+        "b_option1_shown_AB": 83,
+        "n0_even": false,
+        "ties_resampled": 0
+      },
+      "A1|C16": {
+        "n_option0_winners": 163,
+        "n_option1_winners": 157,
+        "a_option0_shown_AB": 81,
+        "b_option1_shown_AB": 79,
+        "n0_even": false,
+        "ties_resampled": 0
+      },
+      "A2|C01": {
+        "n_option0_winners": 159,
+        "n_option1_winners": 161,
+        "a_option0_shown_AB": 79,
+        "b_option1_shown_AB": 81,
+        "n0_even": false,
+        "ties_resampled": 0
+      },
+      "A2|C02": {
+        "n_option0_winners": 166,
+        "n_option1_winners": 154,
+        "a_option0_shown_AB": 83,
+        "b_option1_shown_AB": 77,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A2|C03": {
+        "n_option0_winners": 157,
+        "n_option1_winners": 163,
+        "a_option0_shown_AB": 78,
+        "b_option1_shown_AB": 82,
+        "n0_even": false,
+        "ties_resampled": 0
+      },
+      "A2|C04": {
+        "n_option0_winners": 156,
+        "n_option1_winners": 164,
+        "a_option0_shown_AB": 78,
+        "b_option1_shown_AB": 82,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A2|C05": {
+        "n_option0_winners": 166,
+        "n_option1_winners": 154,
+        "a_option0_shown_AB": 83,
+        "b_option1_shown_AB": 77,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A2|C06": {
+        "n_option0_winners": 165,
+        "n_option1_winners": 155,
+        "a_option0_shown_AB": 82,
+        "b_option1_shown_AB": 78,
+        "n0_even": false,
+        "ties_resampled": 0
+      },
+      "A2|C07": {
+        "n_option0_winners": 158,
+        "n_option1_winners": 162,
+        "a_option0_shown_AB": 79,
+        "b_option1_shown_AB": 81,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A2|C08": {
+        "n_option0_winners": 165,
+        "n_option1_winners": 155,
+        "a_option0_shown_AB": 82,
+        "b_option1_shown_AB": 78,
+        "n0_even": false,
+        "ties_resampled": 0
+      },
+      "A2|C09": {
+        "n_option0_winners": 156,
+        "n_option1_winners": 164,
+        "a_option0_shown_AB": 78,
+        "b_option1_shown_AB": 82,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A2|C10": {
+        "n_option0_winners": 160,
+        "n_option1_winners": 160,
+        "a_option0_shown_AB": 80,
+        "b_option1_shown_AB": 80,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A2|C11": {
+        "n_option0_winners": 157,
+        "n_option1_winners": 163,
+        "a_option0_shown_AB": 78,
+        "b_option1_shown_AB": 82,
+        "n0_even": false,
+        "ties_resampled": 0
+      },
+      "A2|C12": {
+        "n_option0_winners": 147,
+        "n_option1_winners": 173,
+        "a_option0_shown_AB": 73,
+        "b_option1_shown_AB": 87,
+        "n0_even": false,
+        "ties_resampled": 0
+      },
+      "A2|C13": {
+        "n_option0_winners": 170,
+        "n_option1_winners": 150,
+        "a_option0_shown_AB": 85,
+        "b_option1_shown_AB": 75,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A2|C14": {
+        "n_option0_winners": 158,
+        "n_option1_winners": 162,
+        "a_option0_shown_AB": 79,
+        "b_option1_shown_AB": 81,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A2|C15": {
+        "n_option0_winners": 166,
+        "n_option1_winners": 154,
+        "a_option0_shown_AB": 83,
+        "b_option1_shown_AB": 77,
+        "n0_even": true,
+        "ties_resampled": 0
+      },
+      "A2|C16": {
+        "n_option0_winners": 155,
+        "n_option1_winners": 165,
+        "a_option0_shown_AB": 77,
+        "b_option1_shown_AB": 83,
+        "n0_even": false,
+        "ties_resampled": 0
+      }
+    }
+  },
+  "files": {
+    "data/acquisition/train/A1/train_full.jsonl": "40d0aa2ea657fe5704af5eca8f37b25279637e1b7c0bccb6c2439c390425240c",
+    "data/acquisition/train/A1/train_sft.jsonl": "9b762d19f51ea8271b5594ddb2db466ddd2ca0458c745353a0f2470cca413b48",
+    "data/acquisition/train/A2/train_full.jsonl": "f8cc13744e37d4118f2e7e30e1822c37aed92967e94142831b8293baff74f268",
+    "data/acquisition/train/A2/train_sft.jsonl": "4cea03ab8e51fa09f5568db88a1472676062180016c2d0cf5171c0f3653dc46b"
+  }
+}

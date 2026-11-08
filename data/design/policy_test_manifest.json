@@ -1,0 +1,19 @@
+{
+  "split": "policy_test",
+  "status": "SEALED for the FINAL gate",
+  "generated_by": {
+    "python": "3.12.7",
+    "executable": "/Users/calypsocalcott/Desktop/Coordination/self-interp-openweight/.venv/bin/python",
+    "platform": "macOS-15.5-arm64-arm-64bit",
+    "numpy": "1.26.4"
+  },
+  "master_seed": 20260831,
+  "n_pairs_per_context": 60,
+  "n_prompt_rows": 1920,
+  "n_key_rows": 7680,
+  "ties_resampled": 0,
+  "files": {
+    "data/common/policy_test_prompts.jsonl": "2f59aab812aa6220a27303fbe1d309caf125e8bcaf9fba19dafa1a9a84d8942e",
+    "data/common/policy_test_keys.csv": "f1ea700e9e6e42a1db89ebcec035ab334dc1fca4e1d2880ec5cfe34f688c790b"
+  }
+}

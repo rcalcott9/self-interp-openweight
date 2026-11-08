@@ -1,0 +1,9 @@
+# A2 under recipe v2. Differs from configs/a2_cloud.yaml ONLY in loss_mode and run_tag.
+run_tag: a2v2_qwen7b
+device: cuda
+train:
+  loss_mode: choice_only
+data:
+  adapter: A2
+  contexts: null
+  train_examples_per_context: null

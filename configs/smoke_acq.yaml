@@ -1,0 +1,40 @@
+# v3 ACQUISITION SMOKE. Strengthened after the 0.5B v2 smoke failed to reveal the
+# 7B nontermination collapse.
+#
+# What is now exercised that was not before:
+#   * the EXACT production tokenizer and chat template (verified byte-identical:
+#     A=32, B=33, <|im_end|>=151645, same template hash, same ids on real prompts);
+#   * a structural EOS-supervision audit on every training row BEFORE training;
+#   * free generation on the BASE model before training and on the ADAPTER after,
+#     with max_new_tokens 32 so nontermination is observable, not truncated;
+#   * 160 optimizer steps rather than 50 (3.2x), over 640 example presentations.
+smoke: true
+run_family: acq
+run_tag: acq_smoke_qwen05b
+device: mps
+model:
+  base_model_id: "Qwen/Qwen2.5-0.5B-Instruct"
+  base_revision: "7ae557604adf67be50417f59c2c2f167def9a775"
+  tokenizer_id: "Qwen/Qwen2.5-0.5B-Instruct"
+  dtype: float32          # SMOKE-ONLY
+lora:
+  r: 8                    # SMOKE-ONLY
+  lora_alpha: 16
+train:
+  loss_mode: completion   # v3: choice + formatting + <|im_end|> ALL supervised
+  num_train_epochs: 2
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 1
+  logging_steps: 20
+data:
+  adapter: A1
+  contexts: ["C03", "C06"]   # C03 shared-policy + C06 LOW-OVERLAP,
+                                 # so D5' (discriminating cases) is exercised
+  train_examples_per_context: 160     # 2 x 160 = 320 examples, x2 epochs = 160 opt steps
+eval:
+  policy_val_pairs_per_context: 20
+  freegen_pairs_per_context: 8
+  batch_size: 8
+  sampling:
+    n_samples: 4
+    pairs_per_context: 8
